@@ -8,26 +8,31 @@
     <title>做锤子核酸</title>
 </head>
 
-<script> 
-    function show(){ 
-    var date = new Date(); //日期对象 
-    var now = ""; 
-    now = date.getFullYear()+"年"; //读英文就行了 
-    now = now + (date.getMonth()+1)+"月"; //取月的时候取的是当前月-1如果想取当前月+1就可以了 
-    now = now + date.getDate()+"日"; 
-    now = now + date.getHours()+"时"; 
-    now = now + date.getMinutes()+"分"; 
-    now = now + date.getSeconds()+"秒"; 
-    document.getElementById("div1").innerHTML = now; //div的html是now这个字符串 
-    setTimeout("show()",1000); //设置过1000毫秒就是1秒，调用show方法 
-    } 
-</script>
 
-<body background="Group 1-2.png" οnlοad="show()">
 
-<div id="div1" height="35" width="350" style="margin-top:519px; margin-left:20%; margin-right:20%; background:#f4f4f4; color:#3A3B3D" align="center">
-    <h0>Inspired by:<br></h0>
+<body background="Group 1.png" οnlοad="show()">
+
+<div id="times" height="75" width="557" style="margin-top:857px; margin-left:20%; margin-right:20%; background:#f4f4f4; color:#3A3B3D" align="center">    
+    <h1">111</h1>
 </div>
+
+<script type="text/javascript">
+    //得到时间并写入div
+    function getDate(){
+        //获取当前时间
+        var date = new Date();
+        //格式化为本地时间格式
+        var date1 = date.toLocaleString();
+        //获取div
+        var div1 = document.getElementById("times");
+        //将时间写入div
+        div1.innerHTML = date1;
+    }
+    //使用定时器每秒向div写入当前时间
+    setInterval("getDate()",1000);
+
+    
+</script>
 
 </body>
 </html>
