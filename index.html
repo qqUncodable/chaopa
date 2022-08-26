@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>做锤子核酸</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>做锤子核酸</title>
 </head>
-<body>
 
-<div>
-    <img src="chaopa/Group 1.png" class="image">
+<script> 
+    function show(){ 
+    var date = new Date(); //日期对象 
+    var now = ""; 
+    now = date.getFullYear()+"年"; //读英文就行了 
+    now = now + (date.getMonth()+1)+"月"; //取月的时候取的是当前月-1如果想取当前月+1就可以了 
+    now = now + date.getDate()+"日"; 
+    now = now + date.getHours()+"时"; 
+    now = now + date.getMinutes()+"分"; 
+    now = now + date.getSeconds()+"秒"; 
+    document.getElementById("div1").innerHTML = now; //div的html是now这个字符串 
+    setTimeout("show()",1000); //设置过1000毫秒就是1秒，调用show方法 
+    } 
+</script>
+
+<body background="Group 1-2.png" οnlοad="show()">
+
+<div id="div1" height="35" width="350" style="margin-top:519px; margin-left:20%; margin-right:20%; background:#f4f4f4; color:#3A3B3D" align="center">
+    <h0>Inspired by:<br></h0>
 </div>
 
 </body>
